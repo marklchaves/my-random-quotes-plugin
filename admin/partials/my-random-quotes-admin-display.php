@@ -27,6 +27,8 @@
 
         // Heading for list of quotes ~mlc
         $quo_title = $options['quo-title'];
+
+        $fancy_box = $options['fancy-box'];
         ?>
         <?php
         settings_fields($this->plugin_name);
@@ -35,10 +37,19 @@
 
         <!-- Optional title for quotes list -->
         <fieldset>
-            <legend class="screen-reader-text"><span>Include title in quotes list.</span></legend>
+            <legend class="screen-reader-text"><span>Include title in quotes list?</span></legend>
             <label for="<?php echo $this->plugin_name; ?>-quo-title">
                 <input type="checkbox" id="<?php echo $this->plugin_name; ?>-quo-title" name="<?php echo $this->plugin_name; ?>[quo-title]" value="1" <?php checked($quo_title, 1); ?> />
                 <span><?php esc_attr_e('Include title in quotes list?', $this->plugin_name); ?></span>
+            </label>
+        </fieldset>
+
+        <!-- Optional fancy box for quotes list -->
+        <fieldset>
+            <legend class="screen-reader-text"><span>Include fancy content box around quotes list?</span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-fancy-box">
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-fancy-box" name="<?php echo $this->plugin_name; ?>[fancy-box]" value="1" <?php checked($fancy_box, 1); ?> />
+                <span><?php esc_attr_e('Include fancy content box around quotes list?', $this->plugin_name); ?></span>
             </label>
         </fieldset>
 

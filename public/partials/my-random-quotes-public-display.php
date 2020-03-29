@@ -19,6 +19,11 @@
 
 <?php
 $options = get_option('my-random-quotes');
+$fancy_box = "";
+if ($options['fancy-box']) {
+    $fancy_box = "fancy-box";
+}
+echo ('<section class="' . $fancy_box . '">');
 if ($options['quo-title']) {
     echo ('<h2>' . $args['quotes-title'] . '</h2>');
 }
@@ -30,3 +35,4 @@ if ($options['quo-title']) {
         </li>
     <?php } ?>
 </ul>
+</section>

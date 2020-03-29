@@ -2,3 +2,18 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+.fancy-box {
+    overflow: hidden;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 2px 3px 5px;
+    padding: 2% 2% 2% 2%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 5px 5px 5px 5px;
+  }
+  

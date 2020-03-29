@@ -60,7 +60,7 @@ class My_Random_Quotes_Admin
 		$opts['capability_type'] = $cap_type;
 		$opts['description'] = '';
 		$opts['exclude_from_search'] = FALSE;
-		$opts['has_archive'] = FALSE;
+		$opts['has_archive'] = TRUE; // ~mlc 10 March 2020
 		$opts['hierarchical'] = FALSE;
 		$opts['map_meta_cap'] = TRUE;
 		$opts['menu_icon'] = 'dashicons-businessman';
@@ -199,6 +199,7 @@ class My_Random_Quotes_Admin
 
 		//Quote title
 		$valid['quo-title'] = (isset($input['quo-title']) && !empty($input['quo-title'])) ? 1 : 0;
+		$valid['fancy-box'] = (isset($input['fancy-box']) && !empty($input['fancy-box'])) ? 1 : 0;
 		//return 1;
 		return $valid;
 	}
